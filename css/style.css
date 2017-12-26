@@ -6,14 +6,48 @@
     background: #111;
     opacity: 0.8;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
 }
 .fixed_overlay{
     height: 100%;
     overflow: hidden;
     width: 100vw;
 }
+.btn-up {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #e84c3d;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    cursor: pointer;
+    display: none;
+    
+}
+.btn-up--shown{
+    display: block;
+    
+}
+.btn-up:hover {
+    transition: all .1s ease-in-out;
+    fill: #fff;
+    background: #e84c3d;
+    
+        
+}
+.map-container {
+    width: 100%;
+    position: relative;
+}
 
+.address-container {
+    max-width: 457px;
+    position: absolute;
+    z-index: 999;
+    padding-top: 100px;
+    padding-left: 130px;
+}
 .modal {
     display: none;
     width: 400px;
@@ -25,7 +59,7 @@
     padding: 20px;
     text-align: center;
     background: #21242b;
-    z-index: 1;
+    z-index: 4;
     color: #fff;
     }
 

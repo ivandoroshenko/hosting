@@ -14,6 +14,25 @@ $(function() {
       } 
     
  });
+
+    //button up
+    $(document).click(function (event) {
+        btnUp = event.target;
+        if ($(btnUp.parentNode).hasClass('btn-up') ) {
+            $('body, html').animate({ 'scrollTop': 0 }, 1000);
+        }
+    });
+    $(document).scroll(function (e) { 
+        e.preventDefault;
+        if ($(document).scrollTop() > 200) {
+            $('.btn-up').addClass('btn-up--shown');
+        } else {
+            $('.btn-up').removeClass('btn-up--shown')
+       }
+    }); 
+    
+
+//navigation click======
     $('nav a').click(function(e){
         e.preventDefault();
         var getHref = $(this).attr('href');
@@ -22,6 +41,8 @@ $(function() {
             scrollTop:jump
         }, 1500);
     });
+
+//dropdown header
     $(document).scroll(function(){
         var headerHeight = $('.nav-container').outerHeight();
         //console.log(headerHeight);
@@ -31,19 +52,26 @@ $(function() {
             if (($(document).scrollTop() > headerHeight + 200)) {
                 $('.nav-container').removeClass('navigation_hidden');
                 $('.nav-container').addClass('navigation_fixed');
+                
             } 
             return;
         }     
         $('.nav-container').removeClass('navigation_hidden navigation_fixed');
     }); 
 });
-//button up
-$('.btn-up').click(function () {
-    $('body').animate({ 'scrollTop': 0 }, 1000);
-    $('html').animate({ 'scrollTop': 0 }, 1000);
+
+//show more function 
+$('a.show_more').click(function(event){
+   event.preventDefault();
+    showMore = event.target;
+    postList = $(".post-list")[0];
+    lastChild = postList.lastElementChild;
+    if ($(this) || $(this).parentNode.hasClass('show_more--btn')) {
+        $(lastChild).clone(true).appendTo(".post-list");
+    } return;
 });
 
-//Google maps
+//Google maps=========
 ;(function($){
     $(window).load(function(){
         var map;
@@ -108,7 +136,7 @@ $('.btn-up').click(function () {
                     "elementType": "geometry",
                     "stylers": [
                         {
-                            "color": "#eeeeee"
+                            "color": "#fff"
                         }
                     ]
                 },
