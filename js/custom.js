@@ -60,7 +60,15 @@ $(function() {
     }); 
 });
 
-//show more function 
+$(function($){
+    $(function () { 
+    $('.testimonials--slider').slick({
+    dots:true
+    });
+})
+})(jQuery);
+
+//show more function AJAX imitation
 $('a.show_more').click(function(event){
    event.preventDefault();
     showMore = event.target;

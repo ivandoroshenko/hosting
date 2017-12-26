@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">    
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,700|PT+Sans:400,700' rel='stylesheet' type='text/css'>
 
     <link rel="apple-touch-icon" sizes="57x57" href="i/favicons/apple-touch-icon-57x57.png">
@@ -224,12 +226,16 @@
 
 
 
-<!-- Testimonials -->
+
+    <!-- Testimonials -->
 <div class="container page-block text-center" id="testimonials">
     <h2 class="title title_dark">Testimonials</h2>
     <p class="text text_dark">Couple of words about this section</p>
 
-    <div class="testimonials">
+<!-- Testimonials slider -->
+<div class="container testimonials--slider">
+
+    <div class="testimonials testimonials--slide">
 
         <div class="testimonials__item">
             <p class="testimonials-text">The best and most reliable VPS account I have experienced from happy-hosting. I have never expected to have such a reliable host. Thanks to them very much for their unparalleled services with excellent administration.</p>
@@ -239,9 +245,36 @@
             <p class="testimonials-author">Oscar Wild,  Pragmatic Solutions</p>
         </div>
 
-    </div><!-- /.testimonials -->
+    </div><!-- /.testimonials--slide -->
 
+    <div class="testimonials testimonials--slide">
+
+        <div class="testimonials__item">
+            <p class="testimonials-text">The best and most reliable VPS account I have experienced from happy-hosting. I have never expected to have such a reliable host. Thanks to them very much for their unparalleled services with excellent administration.</p>
+            <div class="testimonials-photo">
+                <img src="http://placehold.it/80" width="80" height="80" alt="">
+            </div>
+            <p class="testimonials-author">Oscar Wild,  Pragmatic Solutions</p>
+        </div>
+
+    </div><!-- /.testimonials--slide -->
+    <div class="testimonials testimonials--slide">
+
+        <div class="testimonials__item">
+            <p class="testimonials-text">The best and most reliable VPS account I have experienced from happy-hosting. I have never expected to have such a reliable host. Thanks to them very much for their unparalleled services with excellent administration.</p>
+            <div class="testimonials-photo">
+                <img src="http://placehold.it/80" width="80" height="80" alt="">
+            </div>
+            <p class="testimonials-author">Oscar Wild,  Pragmatic Solutions</p>
+        </div>
+
+    </div><!-- /.testimonials--slide -->
+
+
+</div>
+<!-- /Testimonials slider -->
 </div><!-- /.container -->
+
 
 
 
@@ -455,6 +488,7 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?language=en" async></script>
 <script src="js/jquery-1.12.0.min.js"></script>
+<script src="js/slick.min.js"></script>
 <script src="js/custom.js"></script>
 
 <!-- go up arrow button -->
