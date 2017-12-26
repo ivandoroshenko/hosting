@@ -146,3 +146,6 @@ color: #fff;
     transition: all .3s ease-in-out;
     transform: translateY(0px);
 }
+.testimonials-photo {
+    display: inline-block;
+}
