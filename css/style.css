@@ -44,7 +44,7 @@
 .address-container {
     max-width: 457px;
     position: absolute;
-    z-index: 999;
+    z-index: 2;
     padding-top: 100px;
     padding-left: 130px;
 }
@@ -126,25 +126,26 @@ color: #fff;
     cursor: pointer;
     opacity: 0.5;
 }
+
 .nav-container {
-    position: absolute;
+    margin-top: 0;
+    position: fixed;
     top: 0;
     left: 0;
-    transition: all .3s ease-in-out;
+    transition: all 0.35s ease-out;
     width: 100%;
     z-index: 2;
 }
-.navigation_hidden{
-     transform: translateY(-100px);
-     transition: all .3s ease-in-out;
+.nav-scrolled {
+background: #2c3039;
+transition: all 0.7s ease-out;
+z-index: 3;
 }
-.navigation_fixed {
-    position: fixed;
-    background: #111;
-    opacity: 0.9;
-    width: 100%;
-    transition: all .3s ease-in-out;
-    transform: translateY(0px);
+.navigation_hidden{
+     margin-top:-100px;
+     visibility: hidden;
+    transition: all 0.35s ease-out; 
+          
 }
 .testimonials-photo {
     display: inline-block;
